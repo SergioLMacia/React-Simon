@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|VT323|Oswald|Reenie+Beanie');
+
+*{
+-webkit-touch-callout:none;
+-webkit-user-select:none;
+-khtml-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+user-select:none;
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  margin: 25% auto;
+  animation: App-logo-spin infinite 20s linear;
+  height: 50%;
+}
+
+.App-header {background-color: #222;height: 80px;padding: 20px;color: white;}
+.App-header button{
+  cursor: pointer;
+  border: 0px;
+  border-radius: 10px;
+  padding: 4px 12px;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+}
+
+.App-intro {font-size: large;}
+body{
+  background: url('retina_wood.png') repeat;
+}
+#filler{
+  position: absolute;
+  border-radius: 50%;
+  top: calc(25% - 20px); left: calc( 25% - 20px );
+  width: 50%; height: 50%;
+  background-color: #232323;
+  border: 20px solid #444;
+}
+.game-title{
+  font-family: "Alfa Slab One";
+  font-weight: 200;
+  font-size: 46px;
+  margin: 0px 0px 0px 10px;
+}
+
+.game-title small{
+  font-family: sans-serif;
+  font-size: 40%;
+  vertical-align: 25px;
+  margin-left:-10px;
+}
+#game{
+  position: relative;
+  border: 15px solid #222;
+  background-color: #444;
+  border-radius: 50%;
+  width: 35vw;
+  height: 35vw;
+  margin: 5vh auto;
+  overflow: hidden;
+  box-shadow: 0px 6px 15px #222;
+  user-select: none;
+}
+.scoreboard{
+  position:absolute;
+  top:15vh;
+  right:5vw;
+  height: auto;
+  width: 220px;
+  padding: 30px 20px;
+  color: rgba(90,90,90,0.7);
+  font-family: 'Reenie Beanie', cursive;
+  font-weight: bold;
+  font-size: 3em;
+  line-height: 1em;
+  text-shadow: 0 0 0 transparent, 0px 0px 0px #000, 0 0 0 transparent;
+/*
+  background: url('purty_wood.png') repeat;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+*/
+}
+::-moz-selection {text-shadow:none;}
+::selection {text-shadow:none;}
+
+@media (max-width: 900px ){
+  .App-header{height: auto;}
+  #game{width: 60vw;height: 60vw;}
+  .scoreboard{
+    background:none; box-shadow: none; color: inherit; font-weight: inherit;
+    position:relative;top:0;right:0;
+    height: auto;width: auto;border: 0px;
+    font-family: 'VT323', cursive;
+    display: inline-block;
+    padding: 5px 10px;
+    line-height: 20px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 600px ){#game{width: 80vw;height: 80vw;}}
+#game div:not(#filler){
+  height: 50%;
+  margin: -16px -16px -16px -16px;
+  display: inline-block;
+  width: 50%;
+  cursor: pointer;
+  border: 16px solid #222;
+}
+
+#btn-red{background-color:#b50101;box-shadow: inset -25px -25px 50px #fb0404;}
+#btn-blue{background-color:#0573ce;box-shadow: inset 25px -25px 50px #058eff;}
+#btn-yellow{background-color:#cccc00;box-shadow: inset -25px 25px 50px #f2ff01;}
+#btn-green{background-color:#0eb906;box-shadow: inset 25px 25px 50px #13ff00;}
+
+#btn-red.active{background-color:#ff5050;box-shadow: inset -25px -25px 50px #ff7373;}
+#btn-blue.active{background-color:#52b1ff;box-shadow: inset 25px -25px 50px #88c9ff;}
+#btn-yellow.active{background-color:#ffff65;box-shadow: inset -25px 25px 50px #f9ff8c;}
+#btn-green.active{background-color:#5aff52;box-shadow: inset 25px 25px 50px #94f98b;}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.sweet-alert button.btn.btn-lg.btn-primary {
+    color: #232323;
+    background-color: #cacaca;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.visitame{
+  position:absolute!important; bottom: 10px; right: 15px;
+  font-style: italic;
+}
+.visitame a, .visitame a:active, .visitame a:visited{
+  text-decoration: none;
+  color: #4F7BBC;
+}
+.visitame a:hover{
+  color: #7B7B7B;
+}
